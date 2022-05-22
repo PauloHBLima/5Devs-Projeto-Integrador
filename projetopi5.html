@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="global.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Open+Sans:wght@600&family=Roboto&family=Ropa+Sans&display=swap">
     <title>5 Dev's</title>
 </head>
 
@@ -25,6 +23,7 @@
             <div class="cadastro">
                 <img src="img/retrato 1.png" alt="" class="cadastro">
                 <p>Faça login ou Cadastra-se</p>
+
             </div>
 
             <img src="img/chamada-telefonica 1.png" alt="" class="saq">
@@ -47,19 +46,44 @@
             <p><a href="contato.html">Fale conosco</a></p>
         </div>
 
-        <div id="items-carrossel">
-            <div id="items">
-                <div class="item"><img src="https://unsplash.it/1600/400?image=950" /></div>
-                <div class="item"><img src="https://unsplash.it/1600/400?image=930" /></div>
-                <div class="item"><img src="https://unsplash.it/1600/400?image=990" /></div>
-                <div class="item"><img src="https://unsplash.it/1600/400?image=980" /></div>
-                <div class="item"><img src="https://unsplash.it/1600/400?image=970" /></div>
-                <div class="item"><img src="https://unsplash.it/1600/400?image=976" /></div>
-                <div class="item"><img src="https://unsplash.it/1600/400?image=993" /></div>
-                <div class="item"><img src="https://unsplash.it/1600/400?image=969" /></div>
+        <div class="slider">
+            <div class="slides">
+                <!--Radio Buttons-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <!--FIM Radio Buttons-->
+                <!--slides IMAGENS-->
+                <div class="slide first">
+                    <img src="/img/Capturar1.jpg" alt="imagem 1" />
+                </div>
+                <div class="slide">
+                    <img src="/img/Capturar2.JPG" alt="imagem 2" />
+                </div>
+                <div class="slide">
+                    <img src="/img/Capturar3.jpg" alt="imagem 3" />
+                </div>
+                <div class="slide">
+                    <img src="/img/Capturar4.jpg" alt="imagem 4" />
+                </div>
+                <!-- FIM slides IMAGENS-->
+                <!-- NAVEGATION AUTO-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+            </div>
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
             </div>
         </div>
-
+                <script src="script.js"></script>
     </section>
 
 
