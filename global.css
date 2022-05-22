@@ -33,7 +33,10 @@ nav {
 .cadastro p{
     padding: 10px;
     justify-content: space-between;
-    color: white;
+    color: white;  
+}
+.cadastro img {
+    height: 35px;
 }
 
 .search-box {
