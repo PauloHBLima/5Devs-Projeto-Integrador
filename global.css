@@ -21,6 +21,10 @@ nav {
     padding: 9px 39px 9px 19px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .topicos p a{
     color: white;
 }
@@ -31,7 +35,6 @@ nav {
 }
 
 .cadastro p{
-    padding: 10px;
     justify-content: space-between;
     color: white;  
 }
@@ -96,6 +99,12 @@ nav {
     align-items: center;
 }
 
+.cadastrop{
+    display: block;
+    margin-left: 10px;
+
+}
+
 .slider {
     margin: 0 auto;
     width: 100%;
@@ -122,6 +131,12 @@ nav {
 
 .slide img {
     width: 100%;
+}
+
+.destaquesFaixa {
+    width: 100%;
+    background-color: #FF7800;
+    height: 50px;
 }
 
 .manual-navigation {
@@ -197,7 +212,41 @@ nav {
     background-color: #fff;
 }
 
+.container {
+    
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #ddd9ce
+}
+.estrela{
+    width: 120px;
+    display: flex;
+    margin: 0px;
+}
 
+.produtoImagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
 
-
-
+.botaoComprar {
+    margin-top: 8px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    color: #FFFFFF;
+    font-family: Helvetica;
+    font-size: 15px;
+    font-weight: 100;
+    padding: 15px;
+    background-color: #FF7800;
+    border: solid #FFFFFF 0;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+ }
