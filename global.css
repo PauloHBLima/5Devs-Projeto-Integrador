@@ -280,18 +280,14 @@ a {
 
 .departamentosAll {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     text-align: center;
+    justify-content: space-evenly;
 }
 
-.departamentosAll h4 {
-margin-bottom: 20px;
+.departamentosicone{
+    width: 30%;
+    margin-bottom: 60px;
 }
 
-.departamentosicones {
-    display: flex;
-    
-}
+
