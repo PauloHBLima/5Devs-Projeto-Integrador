@@ -377,6 +377,14 @@ a {
 
 .listafooter a {
     color: white;
+    
+}
+.listafooter5 h3 {
+    text-align: center;
+    color:white;
+    font-size: 15.5px;
+    padding-left: 10px;
+
 }
 
 .categorias li {
@@ -407,10 +415,27 @@ color: white;
     margin-top:20px;
     margin-bottom:20px;
     color: white;
+
     
 }
 .paragrafoFooter5 {
 margin-top:20px;
 color: white;
 text-align: center;
+}
+
+.redesociaisfooter img{
+    width: 45px;
+    margin-right: 12px;
+}
+.redesociaisfooter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: justify;
+
+}
+
+.appfooter img {
+    width:110px;
+    align-items: justify;
 }
