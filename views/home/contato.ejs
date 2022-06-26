@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/contato.css">
+    <title>Fale Conosco</title>
+</head>
+
+<body>
+    
+    <%- include ('../partials/header') %>
+
+    <section class="geral">
+        <div class="faleConosco1">
+            <h1>FALE CONOSCO </h1>
+        </div>
+        <div class="textoObrigatorio">
+            <h5>Os campos marcados com (*) são de preenchimento obrigatório.</h5>
+        </div>
+        <div class="primeiroBloco">
+
+            <div class="formulario">
+
+
+                <form action="email" method="POST">
+                    <label for="nome">Nome* </label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite o seu nome">
+                    <label for="email">E-mail* </label>
+                    <input type="text" name="email" id="email" placeholder=" Digite o seu e-mail">
+                    <label for="npedido">Número do Pedido* </label>
+                    <input type="text" id="npedido" name="pedido" placeholder="Coloque o número do pedido">
+                    <label for="departamentos">Departamentos* </label>
+                    <select name="departamento" id="departamento" placeholder="Selecione o Departamento">
+                        <option disabled selected>Selecione o Departamento</option>
+                        <option name="departamento" value="vendas"> Vendas</option>
+                        <option name="departamento" value="sac"> SAC</option>
+                        <option name="departamento" value="assistencia"> Assistência Técnica</option>
+                        <option name="departamento" value="elogios">Elogios e Sugestões</option>
+                    </select>
+
+            </div>
+        </div>
+
+        <div class="segundoBloco">
+            <div class="formularioB">
+                <label for="assunto">Assunto* </label>
+                <input type="text" name="nome" id="nome" placeholder="Insira o assunto">
+                <p class="mensagem">Mensagem* </p>
+
+                <textarea name="comentario" id="comentario" placeholder="Conteúdo"></textarea>
+            </div>
+
+
+        </div>
+        <div class="botaoEnviar"><button type="button">ENVIAR</button></div>
+    </section>
+    <div class="recebaEmail">
+        <div class="recebatext">
+            <h3>5 Dev's News</h3>
+            <h4>Receba ofertas exclusivas no seu e-mail</h4>
+        </div>
+
+        <form class="grupoInputs">
+            <div class="mb-3">
+
+                <label for="nome" class="form-label"></label>
+                <input type="text" name="nome" id="nome" class="form-control" placeholder="Qual é o seu nome?">
+            </div>
+        </form>
+        <form class="grupoInputs">
+            <div class="mb-3">
+                <label for="email" class="form-label"></label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Seu E-mail?">
+            </div>
+        </form>
+
+        <button class="botaoCadastrar">CADASTRAR</button>
+
+
+    </div>
+
+    <%- include ('../partials/footer') %>
+
+</body>
+
+</html>
