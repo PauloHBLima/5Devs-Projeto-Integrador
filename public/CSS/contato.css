@@ -20,6 +20,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    background-color: #FFFFFF;
 }
 
 .segundoBloco {
@@ -111,6 +112,7 @@
     background-color: #fcbf49;
     border-radius: 10px;
     font-size: 18px;
+    color: #575757;
 }
 
 .formulario p {
@@ -126,6 +128,8 @@
     background-color: #fcbf49;
     outline: none;
     border-radius: 10px;
+    font-size: 18px;
+    color: #575757;
     
     
 }
