@@ -5,7 +5,11 @@ const homeController = {
     },
     
     faleConosco: (req,res) => {
-        res.render('home/contato') 
+        res.render('home/contato'); 
+    },
+
+    cadastro: (req,res) => {
+        res.render('home/cadastro')
     }
 }
 
