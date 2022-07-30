@@ -4,11 +4,9 @@ const produtoController = require('../controllers/produtoController')
 
 
 
-router.get('/produtos', produtoController.index);
-router.get('/produtos/:id', produtoController.show);
-router.post('/produtos', produtoController.create);
-router.put('/produtos/:id', produtoController.update);
-router.delete('/produtos/:id', produtoController.destroy);
+
+router.get('adm/produtos/:id', produtoController.showOneProduct);
+;
 
 
 
