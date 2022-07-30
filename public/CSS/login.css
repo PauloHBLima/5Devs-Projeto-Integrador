@@ -26,12 +26,13 @@
 .segundoBloco {
     display: flex;
     text-align: justify;
-    width: 50%
+    width: 100%
 }
 
 .primeiroBloco {
     display: flex;
-    width: 50%;
+    width: 100%;
+
 
 }
 

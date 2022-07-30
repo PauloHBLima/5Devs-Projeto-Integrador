@@ -4,8 +4,8 @@ const homeController = require('../controllers/homeController')
 
 router.get('/home', homeController.index);
 router.get('/home/faleConosco', homeController.faleConosco);
+router.get('/home/cadastro', homeController.cadastro);
 router.get('/home/login', homeController.login);
-
 
 
 module.exports =  router;
