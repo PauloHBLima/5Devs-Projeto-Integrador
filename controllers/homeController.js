@@ -9,7 +9,7 @@ const homeController = {
     },
 
     cadastro: (req,res) => {
-        res.render('home/cadastro')
+        res.render('home/cadastro');
     }
 }
 
