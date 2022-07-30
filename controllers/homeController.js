@@ -10,6 +10,17 @@ const homeController = {
 
     cadastro: (req,res) => {
         res.render('home/cadastro');
+    },
+
+
+
+
+
+
+    viewProduto: (req,res) => {
+        const { id } = req.params;
+        const Produtos = Produtosmodel.findById(id);
+        return res.render('/produtos/detalhes', {produto});
     }
 }
 
