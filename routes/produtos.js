@@ -6,7 +6,7 @@ const produtoController = require('../controllers/produtoController')
 
 
 router.get('adm/produtos/:id', produtoController.showOneProduct);
-;
+
 
 
 
