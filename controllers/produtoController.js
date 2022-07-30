@@ -4,7 +4,7 @@ const produtoController = {
 
 showOneProduct: (req,res) => {
     const { id } = req.params;
- res.render('adm/produtos/detalhes')
+ res.render('produtos/detalhes')
 }
 }
 module.exports = produtoController;

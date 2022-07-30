@@ -1,7 +1,22 @@
 
+const produtos =  [{
+    id: 1,
+    nome:"Carro",
+    descricao: "Volvo 60",
+    preco: 80000.00,
+    ativo:false
+
+} 
+
+]
+
 const homeController = {
     index: (req, res) => {
-        res.render('home/index');
+        res.render('home/index', {produtos});
+    },
+
+    viewProduto: (req, res) => {
+        res.render('produto/detalhes', {produtos});
     },
     
     faleConosco: (req,res) => {
@@ -12,13 +27,7 @@ const homeController = {
         res.render('home/cadastro');
     },
 
-    viewProduto: (req,res) => {
-        const { id } = req.params;
-        const Produtos = Produtosmodel.findById(id);
-        return res.render('/produtos/detalhes', {produto});
-    },
-
-    login: (req,res) => {
+       login: (req,res) => {
         res.render('home/login')    
 
     }

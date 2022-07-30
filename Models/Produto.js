@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Produto = sequelize.define('Produto',{
+    const Produto = sequelize.define('Produtos',{
         id: {
             type: DataTypes.INTEGER(10),
             autoIncrement: true,
@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
         },
 
         descricao: {
-          type: DataTypes.INTEGER,
+          type: DataTypes.STRING(400),
           allowNull:false,
         },
 
@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
         },
 
         preco: {
-          type: DataTypes.STRING(50),
+          type: DataTypes.INTEGER,
           allowNull:false,  
          },
 
@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
          },
            
         },{
-            tableName: 'books',
+            tableName: 'produtos',
             timestamps: true,
         });
     return Produto;
