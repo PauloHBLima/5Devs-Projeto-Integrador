@@ -112,48 +112,15 @@
 
             <div class="glider-contain">
                 <div class="glider">
+                    <% produtos.forEach(produto => { %>
                     <div>
-                        <img class="photoProduto" src="/img/product-5.png" alt="">
-                        <h5 class="nomeProduto">Apple new mac book 2015 March</h5>
-                        <h4 class="precoProduto"><del> R$ 1,999.00 </del></h4>
+                        <img class="photoProduto" src="<%= produto.imagem %>" alt="">
+                        <h5 class="nomeProduto"> <%= produto.nome %> </h5>
+                        <h4 class="precoProduto"><del><%= produto.preco %> </del></h4>
                         <h2> R$1,200.00</h2>
                         <a href="/produtos" class="botaoComprar">Compre Agora</a>
                     </div>
-                    <div>
-                        <img class="photoProduto" src="/img/product-5.png" alt="">
-                        <h5 class="nomeProduto">Apple new mac book 2015 March</h5>
-                        <h4 class="precoProduto"><del> R$ 1,999.00 </del></h4>
-                        <h2> R$1,200.00</h2>
-                        <a class="botaoComprar">Compre Agora</a>
-                    </div>
-                    <div>
-                        <img class="photoProduto" src="/img/product-5.png" alt="">
-                        <h5 class="nomeProduto">Apple new mac book 2015 March</h5>
-                        <h4 class="precoProduto"><del> R$ 1,999.00 </del></h4>
-                        <h2> R$1,200.00</h2>
-                        <a class="botaoComprar">Compre Agora</a>
-                    </div>
-                    <div>
-                        <img class="photoProduto" src="/img/product-5.png" alt="">
-                        <h5 class="nomeProduto">Apple new mac book 2015 March</h5>
-                        <h4 class="precoProduto"><del> R$ 1,999.00 </del></h4>
-                        <h2> R$1,200.00</h2>
-                        <a class="botaoComprar">Compre Agora</a>
-                    </div>
-                    <div>
-                        <img class="photoProduto" src="/img/product-5.png" alt="">
-                        <h5 class="nomeProduto">Apple new mac book 2015 March</h5>
-                        <h4 class="precoProduto"><del> R$ 1,999.00 </del></h4>
-                        <h2> R$1,200.00</h2>
-                        <a class="botaoComprar">Compre Agora</a>
-                    </div>
-                    <div>
-                        <img class="photoProduto" src="/img/product-5.png" alt="">
-                        <h5 class="nomeProduto">Apple new mac book 2015 March</h5>
-                        <h4 class="precoProduto"><del> R$ 1,999.00 </del></h4>
-                        <h2> R$1,200.00</h2>
-                        <a class="botaoComprar">Compre Agora</a>
-                    </div>    
+                    <% }) %>
                 </div>
                 <button aria-label="Previous" class="glider-prev">«</button>
                 <button aria-label="Next" class="glider-next">»</button>
