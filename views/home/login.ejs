@@ -5,40 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/CSS/style.css">
+    <link rel="stylesheet" href="./public/CSS/login.css">
     <link rel="stylesheet" href="./public/CSS/login.css">
     <title>Login - 5 Dev's</title>
 </head>
 
 <body>
-    <header class="header">
-        <nav>
-            <img src="/public/Img/Logo 5 Dev's.png" alt="" class="logo">
+    
+    <%- include ('../partials/header') %>
 
-            <div class="search-box">
-                <input type="text" class="search-txt" placeholder="Pesquisar">
-                <a href="a" class="search-btn"> <img src="/public/Img/loupe.png" alt="Lupa"></a>
-            </div>
-
-            <div class="cadastro">
-                <img src="/public/Img/login.png" alt="" class="cadastro">
-                <div class="cadastrop">
-                    <p>Faça login ou</p>
-                    <p>Cadastra-se</p>
-                </div>
-
-            </div>
-
-
-            <img src="/public/Img/chamada-telefonica 1.png" alt="telefone" class="saq">
-            <img src="/public/Img/coracao.png" alt="coração" class="favoritos">
-            <img src="/public/Img/carrinho.png" alt="carrinho" class="carrinho">
-
-        </nav>
-
-
-
-    </header>
         <section class="geral">
 
         <div class="primeiroBloco">
@@ -57,26 +32,7 @@
             </div>
         </div>
 
-        <div class="segundoBloco">
-            <div class="formularioB">
-                <h2>QUERO ME CADASTRAR</h2>
-                <label>E-MAIL</label>
-                <input type="text" value="" placeholder="antonio.jose@exemplo.com">
-                <label>CRIE SUA SENHA</label>
-                <input type="password" value="">
-                <label>CONFIRME SUA SENHA</label>
-                <input type="password" value="">
-                <label>CPF ou CNPJ </label>
-                <input type="text" value="" placeholder="123.XXX.XXX-XX ou 61.XXX.XXX/XXXX-XX" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
-                <label> CEP </label>
-                <input type="text" value="" placeholder="Insira o seu CEP">
-                <a href="#" class="button_cadastro"> CADASTRAR </a>
-
-                
-            </div>
-
-
-        </div>
+        
     </section>
     <div class="recebaEmail">
         <div class="recebatext">
@@ -103,154 +59,7 @@
 
     </div>
 
-    <footer class="rodape">
-
-        <div class="boxFooter1">
-            <h3 class="paragrafoFooter1">Departamentos</h3>
-            <div class="categorias">
-                <ul class="listafooter">
-                    <a href="">
-                        <li> Hardware </li>
-                    </a>
-                    <a href="">
-                        <li> Smartphone </li>
-                    </a>
-                    <a href="">
-                        <li> Periféricos </li>
-                    </a>
-                    <a href="">
-                        <li> Teclado e Mouse </li>
-                    </a>
-                    <a href="">
-                        <li> Computadores </li>
-                    </a>
-                    <a href="">
-                        <li> Placa de Vídeo </li>
-                    </a>
-                    <a href="">
-                        <li> Monitores </li>
-                    </a>
-                    <a href="">
-                        <li> Consoles e Games </li>
-                    </a>
-                    <a href="">
-                        <li> Notebook </li>
-                    </a>
-                    <a href="">
-                        <li> Processadores </li>
-                    </a>
-                </ul>
-            </div>
-        </div>
-
-        <div class="boxFooter2">
-            <h3 class="paragrafoFooter2">Novidades e Promoções</h3>
-            <div class="categorias">
-                <ul class="listafooter">
-                    <a href="">
-                        <li> Seja Prime </li>
-                    </a>
-                    <a href="">
-                        <li> Black Friday </li>
-                    </a>
-                    <a href="">
-                        <li> Mega Maio </li>
-                    </a>
-                    <a href="">
-                        <li> Julho Gamer </li>
-                    </a>
-                    <a href="">
-                        <li> PIX </li>
-                    </a>
-                    <a href="">
-                        <li> Cartão 5 Dev's </li>
-                    </a>
-                </ul>
-                <h3 class="paragrafoFooter2">Baixe os aplicativos</h3>
-                <div class="appfooter">
-                    <li><a href=""><img src="/public/Img/appstore-footer.png" alt=""></a></li>
-                </div>
-                <div class="appfooter">
-                    <li><a href=""><img src="/public/Img/googleplay-footer.png" alt=""></a></li>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="boxFooter3">
-            <h3 class="paragrafoFooter3">Institucional</h3>
-            <div class="categorias">
-                <ul class="listafooter">
-                    <a href="">
-                        <li> Sobre a 5 Dev's </li>
-                    </a>
-                    <a href="">
-                        <li> Politicas do Site e Marketplace </li>
-                    </a>
-                    <a href="">
-                        <li> Politicas de Privacidade </li>
-                    </a>
-                    <a href="">
-                        <li> Prêmios </li>
-                    </a>
-                    <a href="">
-                        <li> Trabalhe Conosco </li>
-                    </a>
-                    <a href="">
-                        <li> Código de Defesa do Consumidor </li>
-                    </a>
-                    <a href="">
-                        <li> Preferência de Cookies </li>
-                    </a>
-                </ul>
-            </div>
-        </div>
-        <div class="boxFooter4">
-            <h3 class="paragrafoFooter4">Minha Conta</h3>
-            <div class="categorias">
-                <ul class="listafooter">
-                    <a href="">
-                        <li> Meus Pedidos </li>
-                    </a>
-                    <a href="">
-                        <li> Cadastrar ou Remover Newslatter </li>
-                    </a>
-                    <br>
-                    <h3 class="paragrafoFooter4">Mídias Sociais</h3>
-                    <div class="redesociaisfooter">
-                        <li><a href=""><img src="/public/Img/facbook-footer.png" alt=""></a></li>
-                        <li><a href=""><img src="/public/Img/whatsapp-footer.png" alt=""></a></li>
-                        <li><a href=""><img src="/public/Img/youtube-footer.png" alt=""></a></li>
-                    </div>
-                    <div class="redesociaisfooter">
-                        <li><a href=""><img src="/public/Img/telegram-footer.png" alt=""></a></li>
-                        <li><a href=""><img src="/public/Img/instagram-footer.png" alt=""></a></li>
-                        <li><a href=""><img src="/public/Img/tictoc-footer.png" alt=""></a></li>
-                    </div>
-
-
-
-                </ul>
-            </div>
-        </div>
-        <div class="boxFooter5">
-            <h3 class="paragrafoFooter5">Atendimento</h3>
-            <div class="categorias">
-                <ul class="listafooter5">
-                    <h3> Hórario de Atendimento: 10:00 ás 18:00 -
-                        Segunda á Sexta,
-                        horário de Brasilia
-                        (exceto domingos e feriados, em Belo Horizonte, MG)
-                        Endereço: Rua Apuiares, 178- Térreo - Xangrilá Belo Horizonte/MG CEP:32186-340
-                        Central - SAC: (99) 99999-9999
-                        E-mail:faleconosco5devs.com.br </h3>
-                </ul>
-            </div>
-        </div>
-
-
-
-    </footer>
+    <%- include ('../partials/footer') %>
 
 </body>
 

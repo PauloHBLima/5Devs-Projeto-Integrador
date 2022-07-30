@@ -4,6 +4,7 @@ const homeController = require('../controllers/homeController')
 
 router.get('/home', homeController.index);
 router.get('/home/faleConosco', homeController.faleConosco);
+router.get('/home/login', homeController.login);
 
 
 
