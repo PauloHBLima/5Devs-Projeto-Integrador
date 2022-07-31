@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Produto = sequelize.define('Produtos',{
+    const Produto = sequelize.define('Produto',{
         id: {
             type: DataTypes.INTEGER(10),
             autoIncrement: true,
@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
          },
 
          ativo: {
-          type: DataTypes.INTEGER,
+          type: DataTypes.BOOLEAN,
           allowNull:false,
          },
            
