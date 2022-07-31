@@ -6,7 +6,7 @@ router.get('/home', homeController.index);
 router.get('/home/faleConosco', homeController.faleConosco);
 router.get('/home/cadastro', homeController.cadastro);
 router.get('/home/login', homeController.login);
-router.get('/produtos/:id', homeController.viewProduto);
+router.get('/home/detalhes/:id', homeController.viewProduto);
 
 
 module.exports =  router;

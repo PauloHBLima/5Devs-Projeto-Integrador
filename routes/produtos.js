@@ -5,7 +5,7 @@ const produtoController = require('../controllers/produtoController')
 
 
 
-router.get('produtos/:id', produtoController.showOneProduct);
+
 
 
 
