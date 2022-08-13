@@ -1,4 +1,4 @@
-
+const produtos = require('../Models/Produto')
 
 
 const homeController = {
@@ -7,11 +7,8 @@ const homeController = {
     },
 
     viewProduto: (req, res) => {
-        
         return res.render('home/detalhes', {produtos});
     },
-
-    
     
     faleConosco: (req,res) => {
         res.render('home/contato'); 
