@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const produtosRouter = require('./routes/produtos')
-const servicosRouter = require('./routes/servicos')
+const adminRoutes = require('./routes/adminRoutes')
 const homeRouter = require('./routes/home');
 
 
@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 
 
 app.use(produtosRouter);
-app.use(servicosRouter);
+app.use(adminRoutes);
 app.use(homeRouter);
 
 
