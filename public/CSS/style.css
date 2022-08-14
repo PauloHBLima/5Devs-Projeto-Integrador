@@ -49,6 +49,10 @@ a {
     height: 35px;
 }
 
+.link-header {
+    color:white;
+}
+
 .search-box {
 
     background: #ffffff;

@@ -65,62 +65,21 @@
         </section>
 
         <section>
-            <!-- <div class="container">
-            <div class="produtoImagem">
-                <img class="variasImagens" src="/img/product-1.png" alt="">
-                <img class="estrela" src="/Img/estrela.png" alt="estrela">
-                <h5 class="nomeProduto">Apple new mac book 2015 March</h5>
-                <h4 class="precoProduto"><del> R$ 1,999.00 </del></h4>
-                <h2> R$1,200.00</h2>
-                <button class="botaoComprar">Compre Agora</button>
-            </div>
-            <div class="produtoImagem">
-                <img class="variasImagens" src="/img/product-2.png" alt="">
-                <img class="estrela" src="/Img/estrela.png" alt="estrela">
-                <h5 class="nomeProduto">Apple new mac book 2015 March</h5>
-                <h4 class="precoProduto"><del> R$ 1,999.00 </del></h4>
-                <h2> R$1,200.00</h2>
-                <button class="botaoComprar">Compre Agora</button>
-            </div>
-            <div class="produtoImagem">
-                <img class="variasImagens" src="/img/product-3.png" alt="">
-                <img class="estrela" src="/Img/estrela.png" alt="estrela">
-                <h5 class="nomeProduto">Apple new mac book 2015 March</h5>
-                <h4 class="precoProduto"><del> R$ 1,999.00 </del></h4>
-                <h2> R$1,200.00</h2>
-                <button class="botaoComprar">Compre Agora</button>
-            </div>
-            <div class="produtoImagem">
-                <img class="variasImagens" src="/img/product-4.png" alt="">
-                <img class="estrela" src="/Img/estrela.png" alt="estrela">
-                <h5 class="nomeProduto">Apple new mac book 2015 March</h5>
-                <h4 class="precoProduto"><del> R$ 1,999.00 </del></h4>
-                <h2> R$1,200.00</h2>
-                <button class="botaoComprar">Compre Agora</button>
-            </div>
-            <div class="produtoImagem">
-                <img class="variasImagens" src="/img/product-5.png" alt="">
-                <img class="estrela" src="/Img/estrela.png" alt="estrela">
-                <h5 class="nomeProduto">Apple new mac book 2015 March</h5>
-                <h4 class="precoProduto"><del> R$ 1,999.00 </del></h4>
-                <h2> R$1,200.00</h2>
-                <button class="botaoComprar">Compre Agora</button>
-            </div>
-
-        </div> -->
-
-
             <div class="glider-contain">
                 <div class="glider">
-                    <% produtos.forEach(produto => { %>
-                    <div>
-                        <img class="photoProduto" src="<%= produto.imagem %>" alt="">
-                        <h5 class="nomeProduto"><%= produto.nome %></h5>
-                        <h4 class="precoProduto"><del><%= produto.preco %></del></h4>
-                        <h2> R$1,200.00</h2>
-                        <a href="/home/detalhes/<%=produto.id%>" class="botaoComprar">Compre Agora</a>
-                    </div>
-                    <% }) %>
+                    <% produtos.forEach(produto=> { %>
+                        <div>
+                            <img class="photoProduto" src="<%= produto.imagem %>" alt="">
+                            <h5 class="nomeProduto">
+                                <%= produto.nome %>
+                            </h5>
+                            <h4 class="precoProduto"><del>
+                                    <%= produto.preco %>
+                                </del></h4>
+                            <h2> R$1,200.00</h2>
+                            <a href="/home/detalhes/<%=produto.id%>" class="botaoComprar">Compre Agora</a>
+                        </div>
+                        <% }) %>
                 </div>
                 <button aria-label="Previous" class="glider-prev">«</button>
                 <button aria-label="Next" class="glider-next">»</button>

@@ -3,7 +3,7 @@ const {Produto} =   require('../Models')
 
 const homeController = {
     index: async (req, res) => {
-        const produtos =await Produto.findAll()
+        const produtos = await Produto.findAll()
         res.render('home/index', {produtos});
     },
 
