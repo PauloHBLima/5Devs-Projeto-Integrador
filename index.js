@@ -22,9 +22,9 @@ app.use(homeRouter);
 
 
 // caso não encontre nenhuma rota
-app.use ((req, res, next) => {
-    return res.status(404).render('not-found', { error:'usuário não encontrado'});
-})
+/*app.use ((req, res, next) => {
+//    return res.status(404).render('not-found', { error:'usuário não encontrado'});
+})*/
 
 
 
