@@ -9,7 +9,7 @@ const homeController = {
 
     viewProduto: async (req, res) => {
         const {id} = req.params
-        const produtos = await Produto.findById(id)
+        const produtos = await Produto.findByPk(id)
         return res.render('home/detalhes', {produtos});
     },
     
