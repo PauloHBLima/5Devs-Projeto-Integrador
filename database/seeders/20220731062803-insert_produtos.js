@@ -5,7 +5,7 @@ module.exports = {
 
   let produtosAll =  [{
     
-    id: 1,
+    
     nome:"Carro",
     descricao: "Volvo 60",
     preco: 800,
@@ -16,7 +16,7 @@ module.exports = {
   },
   {
     
-    id: 2,
+    
     nome:"Carro",
     descricao: "Volvo 60",
     preco: 8000,
@@ -27,7 +27,7 @@ module.exports = {
   },
   {
     
-    id: 3,
+    
     nome:"Carro",
     descricao: "Volvo 60",
     preco: 80000,
@@ -37,7 +37,7 @@ module.exports = {
     updatedAt: new Date().toISOString()
   },{
     
-    id: 4,
+    
     nome:"Carro",
     descricao: "Volvo 60",
     preco: 8000,
@@ -47,7 +47,7 @@ module.exports = {
     updatedAt: new Date().toISOString()
   },{
     
-    id: 5,
+    
     nome:"Carro",
     descricao: "Volvo 60",
     preco: 80000,
@@ -57,7 +57,7 @@ module.exports = {
     updatedAt: new Date().toISOString()
   },{
     
-    id: 6,
+    
     nome:"Carro",
     descricao: "Volvo 60",
     preco: 8000,
@@ -67,7 +67,7 @@ module.exports = {
     updatedAt: new Date().toISOString()
   },{
     
-    id: 7,
+    
     nome:"Carro",
     descricao: "Volvo 60",
     preco: 8000,
