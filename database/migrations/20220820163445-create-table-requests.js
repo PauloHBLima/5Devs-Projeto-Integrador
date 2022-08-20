@@ -20,19 +20,7 @@ module.exports = {
           key: 'id'
         },
         allowNull: false
-      },
-      payment_id: {
-        type: Sequelize.DataTypes.INTEGER(10),
-        references: {
-          model: {
-            tableName: 'products'
-          },
-          key: 'id'
-        },
-        allowNull: false
       }
-    
-    
     
     });
      
