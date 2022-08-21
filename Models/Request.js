@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const payment = sequelize.define('Request', {
+    const Request = sequelize.define('Request', {
        
         id: {
             type: DataTypes.INTEGER(10),
@@ -8,12 +8,24 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
           },
 
-          product_id: {
-            
+          productId: {
+            type: DataTypes.INTEGER(10),
+            allowNull: false,
+            foreignKey: true,
+            field: 'product_id'
           }
     
         }, {
-            tableName: "Request",
+            tableName: "requests",
             timestamps: true
-        });
+        })
+
+        Request.associate = (models => {
+            Request.belongsTo(models.Product, {
+                foreignKey: 'productId',
+                as: 'product'
+            })
+            })
+       
+        return Request;
     }

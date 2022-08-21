@@ -1,41 +1,66 @@
 module.exports = (sequelize, DataTypes) => {
-    const Produto = sequelize.define('Produto',{
-        id: {
-            type: DataTypes.INTEGER(10),
-            autoIncrement: true,
-            allowNull:false,
-            primaryKey: true
-          },
-
-        nome: {
+  const Product = sequelize.define('Product', {
+      id: {
+          type: DataTypes.INTEGER(10),
+          primaryKey: true,
+          autoIncrement: true,
+          allowNull: false
+        },
+  
+        name: {
           type: DataTypes.STRING(200),
-          allowNull:false,
+          allowNull: false
         },
-
-        descricao: {
+  
+        description: {
           type: DataTypes.STRING(400),
-          allowNull:false,
+          allowNull: false
         },
-
-        imagem: {
+      
+        image: {
           type: DataTypes.TEXT,
-          allowNull: false,
+          allowNull: false
         },
+  
+        active: {
+          type: DataTypes.TINYINT(1),
+          allowNull: false
+        },
+  
+        price: {
+          type: DataTypes.FLOAT,
+          allowNull: false
+        },
+  
+        categoryId: {
+          type: DataTypes.INTEGER(10),
+          allowNull: false,
+          foreignKey: true,
+          field: 'category_id'
+        }
+  },
+  {
+      tableName: 'products',
+      timestamps: false
+  })
 
-        preco: {
-          type: DataTypes.INTEGER,
-          allowNull:false,  
-         },
+  Product.associate = (models => {
+      Product.belongsTo(models.Category, {
+          foreignKey: 'categoryId',
+          as: 'category'
+      })
 
-         ativo: {
-          type: DataTypes.BOOLEAN,
-          allowNull:false,
-         },
-           
-        },{
-            tableName: 'produtos',
-            timestamps: true,
-        });
-    return Produto;
+      Product.belongsToMany(models.User, {
+        foreignKey: 'productId',
+        otherKey: 'userId',
+        through: models.UserHasProduct
+      })
+      Product.hasMany(models.UserHasProduct,{
+        foreignKey: 'productId',
+        as: 'buys'
+      })
+
+  })
+
+  return Product
 }
-        
