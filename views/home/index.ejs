@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="/css/glider.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script> -->
     <title>5 Dev's</title>
 </head>
 
@@ -21,13 +19,12 @@
 
             <div class="slider">
                 <div class="slides">
-                    <!--Radio Buttons-->
+                    
                     <input type="radio" name="radio-btn" id="radio1">
                     <input type="radio" name="radio-btn" id="radio2">
                     <input type="radio" name="radio-btn" id="radio3">
                     <input type="radio" name="radio-btn" id="radio4">
-                    <!--FIM Radio Buttons-->
-                    <!--slides IMAGENS-->
+                    
                     <div class="slide first">
 
                         <img src="/img/slide1.png" alt="imagem 1" />
@@ -41,8 +38,7 @@
                     <div class="slide">
                         <img src="/img/slide4.png" alt="imagem 4" />
                     </div>
-                    <!-- FIM slides IMAGENS-->
-                    <!-- NAVEGATION AUTO-->
+                    
                     <div class="navigation-auto">
                         <div class="auto-btn1"></div>
                         <div class="auto-btn2"></div>
@@ -67,17 +63,17 @@
         <section>
             <div class="glider-contain">
                 <div class="glider">
-                    <% produtos.forEach(produto=> { %>
+                    <% products.forEach(product=> { %>
                         <div>
-                            <img class="photoProduto" src="<%= produto.imagem %>" alt="">
+                            <img class="photoProduto" src="<%= product.image %>" alt="">
                             <h5 class="nomeProduto">
-                                <%= produto.nome %>
+                                <%= product.name %>
                             </h5>
                             <h4 class="precoProduto"><del>
-                                    <%= produto.preco %>
+                                    <%= product.price %>
                                 </del></h4>
-                            <h2> R$1,200.00</h2>
-                            <a href="/home/detalhes/<%=produto.id%>" class="botaoComprar">Compre Agora</a>
+                            <h2><%= product.price %></h2>
+                            <a href="/home/detalhes/<%=product.id%>" class="botaoComprar">Compre Agora</a>
                         </div>
                         <% }) %>
                 </div>
