@@ -49,17 +49,6 @@ module.exports = (sequelize, DataTypes) => {
           foreignKey: 'categoryId',
           as: 'category'
       })
-
-      Product.belongsToMany(models.User, {
-        foreignKey: 'productId',
-        otherKey: 'userId',
-        through: models.UserHasProduct
-      })
-      Product.hasMany(models.UserHasProduct,{
-        foreignKey: 'productId',
-        as: 'buys'
-      })
-
   })
 
   return Product

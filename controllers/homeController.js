@@ -4,6 +4,7 @@ const {Produto} =   require('../Models')
 const homeController = {
     index: async (req, res) => {
         const produtos = await Produto.findAll()
+        console.log(produtos)
         res.render('home/index', {produtos});
     },
 
