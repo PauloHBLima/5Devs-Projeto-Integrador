@@ -4,9 +4,9 @@ const homeController = require('../controllers/homeController')
 
 
 router.get('/home', homeController.index);
-router.get('/home/produtos/detalhes/:id', homeController.viewProduto);
-router.get('/home/faleConosco', homeController.faleConosco);
-router.get('/home/cadastro', homeController.cadastro);
+router.get('/home/detail/:id', homeController.viewProduto);
+router.get('/home/contact', homeController.contact);
+router.get('/home/register', homeController.register);
 router.get('/home/login', homeController.login);
 
 

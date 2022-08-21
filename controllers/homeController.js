@@ -10,18 +10,18 @@ const homeController = {
     viewProduto: async (req, res) => {
         const {id} = req.params
         const products = await Product.findByPk(id)
-        return res.render('home/detalhes', {products});
+        return res.render('home/detail', {products});
     },
     
-    faleConosco: (req,res) => {
-        res.render('home/contato'); 
+    contact: (req,res) => {
+        res.render('home/contact'); 
     },
 
-    cadastro: (req,res) => {
-        res.render('home/cadastro');
+    register: (req,res) => {
+        res.render('home/register');
     },
 
-       login: (req,res) => {
+    login: (req,res) => {
         res.render('home/login')    
 
     }
