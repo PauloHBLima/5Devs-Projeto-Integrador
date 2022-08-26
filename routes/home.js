@@ -8,6 +8,7 @@ router.get('/home/detail/:id', homeController.viewProduto);
 router.get('/home/contact', homeController.contact);
 router.get('/home/register', homeController.register);
 router.get('/home/login', homeController.login);
+router.get('/home/card', homeController.card);
 
 
 

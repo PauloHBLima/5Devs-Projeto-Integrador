@@ -24,6 +24,11 @@ const homeController = {
     login: (req,res) => {
         res.render('home/login')    
 
+    },
+
+    card: (req,res) => {
+        res.render("home/card")
+        
     }
 
 }

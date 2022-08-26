@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products House</title>
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <style>
-    </style>
+    <title>5 Devs</title>
 </head>
 
 <body>
@@ -28,11 +26,14 @@
                     <div class="f">Vendido e entregue por: <b>Digital House! </b> |<b> Em estoque</b></div>
                     <div class="d-flex align-center mt-3 justify-content-between">
                         <div>
-                            <h2><%=products.name%></h2>
-                            <h4>R$ <%= products.price %></h4>
-                            <span >À vista no PIX <span>com até <b>5% OFF</b></span></span>
+                            <h2>
+                                <%=products.name%>
+                            </h2>
+                            <h4>R$ <%= products.price %>
+                            </h4>
+                            <span>À vista no PIX <span>com até <b>5% OFF</b></span></span>
                         </div>
-                    
+
                         <form action="/carrinho/adicionar" method="POST">
                             <input type="hidden" name="productId" value="<%=products.id%>">
                             <input type="hidden" name="nome" value="<%=products.name%>">
