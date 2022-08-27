@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/product.css">
     <title>5 Devs</title>
 </head>
 
@@ -16,16 +14,22 @@
 
     <%- include('../partials/header') %>
 
-        <main class="my-5 pt-5">
-            <section class="container">
+        <main class="mainPrincipal">
+            <section class="containerPrincipal">
+                <div class="retornarMenu">
+                    <form action="" method="POST">
+                        <button type='submit' class="btnComprar">COMPRAR MAIS</button>
+                    </form>
+                </div>
                 <div>
-                    <img src="<%= products.image %>" height="520px" alt="">
+                    <img class="umProduto" src="<%= products.image %>" alt="">
                 </div>
 
-                <div id="blocoValores" class="d-flex flex-column justify-content-center pt-3 w-50">
-                    <div class="f">Vendido e entregue por: <b>Digital House! </b> |<b> Em estoque</b></div>
-                    <div class="d-flex align-center mt-3 justify-content-between">
-                        <div>
+                <div id="" class="infoUmProduto">
+
+                    <div>
+                        <div class="">Vendido e entregue por: <b> 5 Dev's! </b> |<b> Em estoque </b></div>
+                        <div class="">
                             <h2>
                                 <%=products.name%>
                             </h2>
@@ -34,17 +38,14 @@
                             <span>À vista no PIX <span>com até <b>5% OFF</b></span></span>
                         </div>
 
-                        <form action="/carrinho/adicionar" method="POST">
-                            <input type="hidden" name="productId" value="<%=products.id%>">
-                            <input type="hidden" name="nome" value="<%=products.name%>">
-                            <input type="hidden" name="imagem" value="<%=products.image%>">
-                            <input type="hidden" name="preco" value="<%=products.price%>">
-                            <button type='submit' class="btn btn-success">COMPRAR</button>
+                        <form action="" method="POST">
+                            <button type='submit' class="btnComprar">COMPRAR</button>
                         </form>
+                        <div class="">
+                            <%= products.description %>
+                        </div>
                     </div>
-                    <div class="mt-5">
-                        <%= products.description %>
-                    </div>
+
                 </div>
             </section>
 
