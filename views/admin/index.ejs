@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/glider.css">
+    <title>5 Dev's</title>
+</head>
+
+<body>
+
+    <%- include ('../partials/header') %>
+
+        
+
+        <section>
+            <div class="glider-contain">
+                <div class="glider">
+                    <% products.forEach(product=> { %>
+                        <div>
+                            <img class="photoProduto" src="<%= product.image %>" alt="">
+                            <h5 class="nomeProduto">
+                                <%= product.name %>
+                            </h5>
+                            <h4 class="precoProduto"><del>
+                                    <%= product.price %>
+                                </del></h4>
+                            <h2><%= product.price %></h2>
+                            <a href="/home/detail/<%=product.id%>" class="botaoComprar">Compre Agora</a>
+                        </div>
+                        <% }) %>
+                </div>
+                <button aria-label="Previous" class="glider-prev">«</button>
+                <button aria-label="Next" class="glider-next">»</button>
+                <div role="tablist" class="dots"></div>
+            </div>
+
+        </section>
+        
+
+
+        
+        
+
+        <%- include ('../partials/footer') %>
+
+
+            <script src="js/glider.js"></script>
+            <script src="js/index.js"></script>
+</body>
+
+</html>
