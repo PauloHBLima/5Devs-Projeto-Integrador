@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     
         }, {
             tableName: "requests",
-            timestamps: true
+            timestamps: false
         })
 
         Request.associate = (models => {

@@ -13,14 +13,16 @@
 
 }
 
-.mainprincipal {
+.mainPrincipal {
     display: flex;
     padding-top: 70px;
     padding-bottom: 70px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    background-color: #FFFFFF;
+    background-color: white;
+    
+}
+
+.containerPrincipal {
+    display: contents;
 }
 
 .segundoBloco {

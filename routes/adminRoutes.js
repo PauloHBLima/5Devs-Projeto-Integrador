@@ -3,6 +3,13 @@ const router = express.Router();
 const adminController = require('../controllers/adminController')
 
 
+
+router.get('/admin', adminController.add);
+router.post('/admin/create', adminController.create);
+
+
+
+
 // router.get('/admin/login', adminController.showLogin);
 // router.post('/admin/login', adminController.Login);
 // router.get('/admin/produtos', adminController.index);

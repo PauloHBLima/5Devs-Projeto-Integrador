@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/edit.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>5 Dev's</title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    
+    <main class="mainPrincipal">
+        <section class="containerPrincipal">
+            <div class="segundoBloco">
+                <div class="formularioB">
+                    <form action="/admin/create" method="POST">
+                    <h2>CADASTRAR PRODUTO</h2>
+                    <label for="name">NOME</label>
+                    <input type="text" name="name"placeholder="Nome do Produto">
+                     <label for="description">DESCRIÇÃO DO PRODUTO</label>
+                    <input type="text" name="description">
+                    <label for="image">IMAGEM DO PRODUTO</label>
+                    <input type="text" name="image">
+                    <label for="category">CATEGORIAS</label>
+                    <select name="category_id">
+                        <% categorys.forEach( category => { %>
+        
+                            <option value="<%= category.id %>"> 
+                                <%= category.name %>
+                            </option>
+        
+                        <% }) %>
+                    </select>
+
+                    <label for="active">ATIVADO/DESATIVADO</label>
+                    <select id="inputStatus" name="active" class="form-control custom-select"> 
+                        <option selected disabled>Selecione uma opção</option>
+                        <option>Ativado</option>
+                        <option>Desativado</option>
+                      </select>
+                    <label for="price"> PREÇO DO PRODUTO </label>
+                    <input type="number" name="price">
+
+                    <button class="button_save" type="submit">SALVAR</button>
+                    <a href="/admin/detail"></a>
+                 </div>
+                </form>
+        </section>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

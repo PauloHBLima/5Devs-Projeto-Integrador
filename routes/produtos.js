@@ -3,7 +3,7 @@ const router = express.Router();
 const produtoController = require('../controllers/produtoController')
 
 
-router.get('/admin', produtoController.index);
+//router.get('/admin', produtoController.index);
 
 
 
