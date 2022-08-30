@@ -9,16 +9,17 @@ const adminController = {
     },
     
     create: async (req, res) => {
-        const { name, description, active, image, price, category_id: categoryId } = req.body;
+        const { name, description, active, image, price, category_id } = req.body;
+        console.log(req.body)
         await Product.create({
             name,
             description,
             active,
             image,
             price,
-            categoryId,
+            categoryId : category_id,
         });
-        return res.redirect("/admin/detail");
+        return res.render("admin/detail");
     },
 
 
