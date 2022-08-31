@@ -13,6 +13,11 @@ const homeController = {
         return res.render('home/detail', {products});
     },
     
+    listAdm: async (req, res) => {
+        const products = await Product.findAll()
+        res.render('admin/listAdm', {products});
+    },
+
     contact: (req,res) => {
         res.render('home/contact'); 
     },

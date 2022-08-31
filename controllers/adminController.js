@@ -19,9 +19,8 @@ const adminController = {
             price,
             categoryId : category_id,
         });
-        return res.render("admin/detail");
+        return res.render("admin/listAdm");
     },
-
 
 }
 

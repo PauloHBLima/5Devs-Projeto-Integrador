@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/listadm.css">
+
+    <title>5 Devs</title>
+</head>
+
+<body>
+
+    <%- include('../partials/header') %>
+
+        <section class="">
+            <div class="containerAll">
+
+                <form action="/home" method="">
+                    <button type='submit' class="btnAdm">CADASTRAR</button>
+
+                </form>
+                <table>
+                    <caption>Tabela de Produtos</caption>
+
+                    <thead>
+                        <tr>
+                            <th>Identificador</th>
+                            <th>Imagem</th>
+                            <th>Nome</th>
+                            <th>Preço</th>
+                            <th>Descrição</th>
+                            <th>Ativo</th>
+                            <th>Ações</th>
+
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+                        <tr>
+                            <% products.forEach(product=> { %>
+
+                                <th>
+                                    <%= product.id %>
+                                </th>
+                                <td><img class="" src="<%= product.image %>" alt="Imagem" width="70px" height="70px">
+                                </td>
+                                <td>
+                                    <%= product.name%>
+                                </td>
+                                <td>
+                                    <%= product.price%>
+                                </td>
+                                <td>
+                                    <%=product.description%>
+                                </td>
+                                <td>
+                                    <%=product.active%>
+                                </td>
+                                <td>
+                                    <a href="" type="button" class="btn btn-primary">Abrir</a>
+                                    <a href="" type="button" class="btn btn-secondary">Editar</a>
+                                    <button type="submit" class="btn btn-danger">Excluir</button>
+                                </td>
+                                <% }) %>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </section>
+
+        <%- include('../partials/footer') %>
+</body>
+
+</html>
