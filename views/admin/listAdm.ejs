@@ -41,8 +41,8 @@
 
 
                     <tbody>
+                        <% products.forEach(product=> { %>
                         <tr>
-                            <% products.forEach(product=> { %>
 
                                 <th>
                                     <%= product.id %>
@@ -66,8 +66,8 @@
                                     <a href="" type="button" class="btn btn-secondary">Editar</a>
                                     <button type="submit" class="btn btn-danger">Excluir</button>
                                 </td>
-                                <% }) %>
-                        </tr>
+                            </tr>
+                            <% }) %>
                     </tbody>
 
                 </table>
