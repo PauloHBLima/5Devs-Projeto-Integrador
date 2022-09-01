@@ -15,6 +15,7 @@ const homeController = {
     
     listAdm: async (req, res) => {
         const products = await Product.findAll()
+        console.log(products)
         res.render('admin/listAdm', {products});
     },
 
