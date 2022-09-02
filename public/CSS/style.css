@@ -112,10 +112,9 @@ a {
     align-items: center;
 }
 
-.cadastrop {
+.cadastro p {
     display: block;
     margin-left: 10px;
-
 }
 
 .slider {
@@ -384,7 +383,6 @@ a {
     display: flex;
     flex-direction: column;
 }
-
 .boxFooter3 {
     display: flex;
     flex-direction: column;
@@ -401,15 +399,14 @@ a {
 }
 
 .listafooter a {
-    color: white;
-    
+    color: white;  
 }
+
 .listafooter5 h3 {
     text-align: center;
     color:white;
     font-size: 15.5px;
     padding-left: 10px;
-
 }
 
 .categorias li {
@@ -418,30 +415,29 @@ a {
 }
 
 .paragrafoFooter1 {
-margin-top:20px;
-margin-bottom:20px;
-color: white;
-}
-.paragrafoFooter2 {
     margin-top:20px;
     margin-bottom:20px;
     color: white;
-    
-    
 }
+
+.paragrafoFooter2 {
+    margin-top:20px;
+    margin-bottom:20px;
+    color: white;  
+}
+
 .paragrafoFooter3 {
     margin-top:20px;
     margin-bottom:20px;
     color: white;
-    
 }
+
 .paragrafoFooter4 {
     margin-top:20px;
     margin-bottom:20px;
-    color: white;
-
-    
+    color: white;  
 }
+
 .paragrafoFooter5 {
 margin-top:20px;
 color: white;
@@ -452,6 +448,7 @@ text-align: center;
     width: 45px;
     margin-right: 12px;
 }
+
 .redesociaisfooter {
     display: flex;
     flex-wrap: wrap;
@@ -463,3 +460,7 @@ text-align: center;
     width:110px;
     align-items: justify;
 }
+
+li { 
+    list-style-type: none;
+ }
