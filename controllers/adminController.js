@@ -21,6 +21,42 @@ const adminController = {
         return res.redirect("/admin/listAdm");
     },
 
-}
+    viewProduct: async (req, res) => {
+        const { id } = req.params
+        const products = await Product.findByPk(id);
+        return res.render('admin/oneProduct', { products });
+    },
+
+    editProduct: async (req, res) => {
+        const { id } = req.params
+        const products = await Product.findByPk(id);
+        const categorys = await Category.findAll();
+        return res.render('admin/editProduct', { products, categorys });
+    },
+
+    update: async (req, res) => {
+        const { id } = req.params
+        const { name, description, active, image, price, category_id } = req.body;
+        await Product.update({
+            name,
+            description,
+            active,
+            image,
+            price,
+            categoryId : category_id,
+        }, { 
+            where: { id } 
+        })
+        return res.redirect('/admin/listAdm');
+    },
+
+    delete: async (req, res) => {
+        const { id } = req.params;
+        await Product.delete({ where: { id } });
+        return res.redirect('/admin');  
+    }
+
+    }
+
 
 module.exports = adminController;

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <title>5 Devs</title>
+</head>
+
+<body>
+
+    <%- include('../partials/header') %>
+
+        <main class="mainPrincipal">
+            <section class="containerPrincipal">
+                <div class="retornarMenu">
+                    <form action="/home" method="">
+                        <a href="/admin/listAdm" type='button' class="btnComprar">LISTA DE PRODUTOS</a>
+                    </form>
+                </div>
+                <div>
+                    <img class="umProduto" src="<%= products.image %>" alt="">
+                </div>
+
+                <div id="" class="infoUmProduto">
+
+                    <div>
+                        <div class="">Vendido e entregue por: <b> 5 Dev's! </b> |<b> Em estoque </b></div>
+                        <div class="">
+                            <h2>
+                                <%=products.name%>
+                            </h2>
+                            <h4>R$ <%= products.price %>
+                            </h4>
+                            <span>À vista no PIX <span>com até <b>5% OFF</b></span></span>
+                        </div>
+
+                        <form action="" method="POST">
+                            <button type='submit' class="btnComprar">COMPRAR</button>
+                        </form>
+                        <div class="">
+                            <%= products.description %>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <%- include('../partials/footer') %>
+</body>
+
+</html>
