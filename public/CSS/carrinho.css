@@ -3,9 +3,22 @@
    }
 
 .mt-5 {
-    background-color: #e9edc9;
+    background-color: #fdcc9d;
+    padding: 100px;
 }
+
 .badge {
-    background-color:#fcbf49;
-    color: #e9edc9;
+    background-color:#198754;
+}
+
+.container {
+
+    width:  100%;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
 }
