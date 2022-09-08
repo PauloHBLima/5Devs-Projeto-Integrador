@@ -4,7 +4,9 @@ const methodOverride = require('method-override');
 const produtosRouter = require('./routes/produtos')
 const adminRoutes = require('./routes/adminRoutes')
 const homeRouter = require('./routes/home');
+const authenRoutes = require ("./routes/authenRoutes")
 const cors = require('cors');
+const session = require("express-session");
 
 app.use(cors());
 app.use(express.json());
@@ -17,7 +19,12 @@ app.set('views', './views');
 
 
 //rotas
-
+app.use(session({
+    secret: 'project of my curse developement',
+    resave: false,
+    saveUninitialized: true,
+}))
+app.use(authenRoutes);
 app.use(adminRoutes);
 app.use(produtosRouter);
 app.use(homeRouter);

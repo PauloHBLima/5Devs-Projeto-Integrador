@@ -19,48 +19,26 @@
         <section class="geral">
 
         <div class="segundoBloco">
+            <form class="formForm" action="/home/register"  method="POST">
+                 
             <div class="formularioB">
                 <h2>QUERO ME CADASTRAR</h2>
+                <% if(typeof error !== "undefined") { %>
+                    <h3 class="error"><%= error %></h3>
+        <% } %>
+                <label>NOME</label> 
+                <input type="text" name="name" placeholder="Digite seu nome completo"/>
                 <label>E-MAIL</label>
-                <input type="text" value="" placeholder="antonio.jose@exemplo.com">
+                <input type="email" name="email" placeholder="antonio.jose@exemplo.com"/>
                 <label>CRIE SUA SENHA</label>
-                <input type="password" value="">
-                <label>CONFIRME SUA SENHA</label>
-                <input type="password" value="">
-                <label>CPF ou CNPJ </label>
-                <input type="text" value="" placeholder="123.XXX.XXX-XX ou 61.XXX.XXX/XXXX-XX" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
-                <label> CEP </label>
-                <input type="text" value="" placeholder="Insira o seu CEP">
-                <a href="#" class="button_cadastro"> CADASTRAR </a>
-
-                
+                <input type="password" name="password" placeholder="Senha"/>
+                <button type="submit" class="button_cadastro"> CADASTRAR </button>
+                <a href="/home/login"></a>     
             </div>
-
+        </form>
 
         </div>
     </section>
-    <div class="recebaEmail">
-        <div class="recebatext">
-            <h3>5 Dev's News</h3>
-            <h4>Receba ofertas exclusivas no seu e-mail</h4>
-        </div>
-
-        <form class="grupoInputs">
-            <div class="mb-3">
-
-                <label for="nome" class="form-label"></label>
-                <input type="text" name="nome" id="nome" class="form-control" placeholder="Qual é o seu nome?">
-            </div>
-        </form>
-        <form class="grupoInputs">
-            <div class="mb-3">
-                <label for="email" class="form-label"></label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="Seu E-mail?">
-            </div>
-        </form>
-
-        <button class="botaoCadastrar">CADASTRAR</button>
-
 
     </div>
 

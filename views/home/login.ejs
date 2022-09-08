@@ -11,55 +11,45 @@
 </head>
 
 <body>
-    
+
     <%- include ('../partials/header') %>
 
         <section class="geral">
 
-        <div class="primeiroBloco">
+            <div class="primeiroBloco">
 
-            <div class="formulario">
-                <h2>FAÇA SEU LOGIN </h2>
+                <div class="formulario">
 
 
-                <form action="email" method="POST">
-                    <label for="nome">E-MAIL </label>
-                    <input type="text" name="nome" id="nome" placeholder="Digite o seu e-mail *">
-                    <label for="email"> SENHA </label>
-                    <input type="password" name="email" id="email" placeholder=" Senha *">
-                    <a href="#" class="button_login"> ENTRAR</a>
-                    
+
+                    <form class="formForm" action="/home/login" method="POST">
+
+                        <div class="formularioB">
+                            <h2>FAÇA SEU LOGIN </h2>
+                            <% if(typeof error !=="undefined" ) { %>
+                                <h3 class="error">
+                                    <%= error %>
+                                </h3>
+                                <% } %>
+                                    <label>E-MAIL</label>
+                                    <input type="email" name="email" placeholder="antonio.jose@exemplo.com" />
+                                    <label>SENHA</label>
+                                    <input type="password" name="password" placeholder="Senha" />
+                                    <button type="submit" class="button_cadastro"> LOGIN </button>
+                                    <a href="/home"></a>
+                        </div>
+                    </form>
+
+                </div>
             </div>
+
+
+        </section>
+
+
         </div>
 
-        
-    </section>
-    <div class="recebaEmail">
-        <div class="recebatext">
-            <h3>5 Dev's News</h3>
-            <h4>Receba ofertas exclusivas no seu e-mail</h4>
-        </div>
-
-        <form class="grupoInputs">
-            <div class="mb-3">
-
-                <label for="nome" class="form-label"></label>
-                <input type="text" name="nome" id="nome" class="form-control" placeholder="Qual é o seu nome?">
-            </div>
-        </form>
-        <form class="grupoInputs">
-            <div class="mb-3">
-                <label for="email" class="form-label"></label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="Seu E-mail?">
-            </div>
-        </form>
-
-        <button class="botaoCadastrar">CADASTRAR</button>
-
-
-    </div>
-
-    <%- include ('../partials/footer') %>
+        <%- include ('../partials/footer') %>
 
 </body>
 

@@ -23,15 +23,6 @@ const homeController = {
         res.render('home/contact'); 
     },
 
-    register: (req,res) => {
-        res.render('home/register');
-    },
-
-    login: (req,res) => {
-        res.render('home/login')    
-
-    },
-
     card: (req,res) => {
         res.render("home/card")
         

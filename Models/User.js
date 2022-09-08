@@ -29,14 +29,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true,
             field: 'address_number'
         },
-
-        isAdmin: {
-            type: DataTypes.TINYINT,
-            allowNull: false,
-            field: 'is_admin'
-        }
-
-    })
+    },
+    {
+        tableName: "users",
+        timestamps: false
+    });
 
     return User
 }

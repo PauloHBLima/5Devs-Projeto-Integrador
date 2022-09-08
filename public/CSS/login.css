@@ -29,6 +29,12 @@
     width: 100%
 }
 
+.formForm {
+    display: flex;
+    text-align: justify;
+    width: 100%;
+}
+
 .primeiroBloco {
     display: flex;
     width: 100%;

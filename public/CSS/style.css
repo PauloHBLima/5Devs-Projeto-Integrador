@@ -464,3 +464,9 @@ text-align: center;
 li { 
     list-style-type: none;
  }
+
+.error {
+  color: red;
+  display: flex;
+  justify-content: center;
+}
