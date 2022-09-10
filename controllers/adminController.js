@@ -52,7 +52,7 @@ const adminController = {
 
     delete: async (req, res) => {
         const { id } = req.params;
-        await Product.delete({ where: { id } });
+        await Product.destroy({ where: { id } });
         return res.redirect('/admin/listAdm');  
     }
 
