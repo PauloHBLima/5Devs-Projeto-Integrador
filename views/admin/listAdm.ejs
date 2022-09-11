@@ -2,68 +2,145 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <!--<link rel="stylesheet" href="/css/product.css">!-->
-    <!--<link rel="stylesheet" href="/css/listadm.css">!-->
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <!--<link rel="stylesheet" href="/css/product.css">!-->
+  <!--<link rel="stylesheet" href="/css/listadm.css">!-->
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
-    <title>5 Devs</title>
+  <title>5 Devs</title>
 </head>
 
 <body>
 
-    <%- include('../partials/header') %>
+  <%- include('../partials/header') %>
 
-        <section class="">
-            <div class="containerAll">
+    <section class="">
+      <div class="containerAll">
+<div class="buttonRegisterProduct"><a href="/admin" class="btn btn-warning mx-auto">CADASTRAR</a></div>
+        
+        <table class="table table-dark table-striped w-75 p-3 mx-auto">
+          <thead>
+            <tr>
+              <th scope="col">Identificador</th>
+              <th scope="col">Imagem</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Preço</th>
+              <th scope="col">Descrição</th>
+              <th scope="col">Ativo</th>
+              <th scope="col">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% products.forEach(product=> { %>
+              <tr>
+                <th scope="row">
+                  <%= product.id %>
+                </th>
+                <td><img class="" src="<%= product.image %>" alt="Imagem" width="70px" height="70px">Mark</td>
+                <td>
+                  <%= product.name%>
+                </td>
+                <td>
+                  <%= product.price%>
+                </td>
+                <td>
+                  <%=product.description%>
+                </td>
+                <td>
+                  <%=product.active%>
+                </td>
+                <td>
+                  <a href="/admin/oneProduct/<%= product.id %>" type="button" class="btn btn-primary">Abrir</a>
+                  <a href="/admin/editProduct/<%= product.id %>" type="button" class="btn btn-secondary">Editar</a>
 
-                <a href="/home" class="btn btn-warning mx-auto">CADASTRAR</a>
-                <table class="table table-dark table-striped w-75 p-3 mx-auto">
-                    <thead>
-                      <tr>
-                        <th scope="col">Identificador</th>
-                        <th scope="col">Imagem</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Preço</th>
-                        <th scope="col">Descrição</th>
-                        <th scope="col">Ativo</th>
-                        <th scope="col">Ações</th>
-                      </tr> 
-                    </thead>
-                    <tbody>
-                        <% products.forEach(product=> { %>
-                      <tr>
-                        <th scope="row"><%= product.id %></th>
-                        <td><img class="" src="<%= product.image %>"alt="Imagem" width="70px" height="70px">Mark</td>
-                        <td><%= product.name%></td>
-                        <td>
-                            <%= product.price%>
-                        </td>
-                        <td>
-                            <%=product.description%>
-                        </td>
-                        <td>
-                            <%=product.active%>
-                        </td>
-                        <td>
-                            <a href="/admin/oneProduct/<%= product.id %>" type="button" class="btn btn-primary">Abrir</a>
-                            <a href="/admin/editProduct/<%= product.id %>" type="button"class="btn btn-secondary">Editar</a>
-                          <form action="/admin/delete/<%= product.id%>?_method=DELETE" method="POST">
-                            <button type="submit" class="btn btn-danger">Excluir</button>
-                        </form>
-                        </td>
-                      </tr>
-                      <% }) %>
-                    </tbody>
-                  </table>
-            </div>
-        </section>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                      Excluir
+                    </button>
+                    <form action="/admin/delete/<%= product.id%>?_method=DELETE" method="POST">
+                    <div class="modal fade text-dark" id="exampleModal" tabindex="-1" role="dialog"
+                      aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Confirmar</h5>
+                            <button type="button" style="border: 0px; background-color:white"  data-dismiss="modal" >
+                              
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48"
+                                  viewBox="0 0 172 172" style=" fill:#000000;">
+                                  <defs>
+                                    <linearGradient x1="35.3245" y1="35.3245" x2="136.6755" y2="136.6755"
+                                      gradientUnits="userSpaceOnUse" id="color-1_fYgQxDaH069W_gr1">
+                                      <stop offset="0" stop-color="#f44f5a"></stop>
+                                      <stop offset="0.443" stop-color="#ee3d4a"></stop>
+                                      <stop offset="1" stop-color="#e52030"></stop>
+                                    </linearGradient>
+                                  </defs>
+                                  <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="none"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                    font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <path d="M0,172v-172h172v172z" fill="none" stroke="none" stroke-width="1"></path>
+                                    <g stroke="none" stroke-width="1">
+                                      <path
+                                        d="M157.66667,86c0,39.57792 -32.08875,71.66667 -71.66667,71.66667c-39.57792,0 -71.66667,-32.08875 -71.66667,-71.66667c0,-39.57792 32.08875,-71.66667 71.66667,-71.66667c39.57792,0 71.66667,32.08875 71.66667,71.66667z"
+                                        fill="url(#color-1_fYgQxDaH069W_gr1)"></path>
+                                      <path
+                                        d="M118.938,103.7375l-17.73392,-17.7375l17.7375,-17.7375c2.79858,-2.79858 2.79858,-7.33508 0,-10.13367l-5.06683,-5.06683c-2.79858,-2.79858 -7.33508,-2.79858 -10.13367,0l-17.74108,17.73392l-17.7375,-17.7375c-2.79858,-2.79858 -7.33508,-2.79858 -10.13367,0l-5.06683,5.06683c-2.79858,2.79858 -2.79858,7.33508 0,10.13367l17.7375,17.7375l-17.7375,17.7375c-2.79858,2.79858 -2.79858,7.33508 0,10.13367l5.06683,5.06683c2.79858,2.79858 7.33508,2.79858 10.13367,0l17.7375,-17.7375l17.7375,17.7375c2.79858,2.79858 7.33508,2.79858 10.13367,0l5.06683,-5.06683c2.79858,-2.795 2.79858,-7.3315 0,-10.13008z"
+                                        fill="#000000" opacity="0.05"></path>
+                                      <path
+                                        d="M117.67308,105.00242l-19.00242,-19.00242l19.00242,-19.00242c2.09983,-2.09983 2.09983,-5.504 0,-7.60025l-5.06683,-5.06683c-2.09983,-2.09983 -5.504,-2.09983 -7.60025,0l-19.006,18.99883l-19.00242,-19.00242c-2.09983,-2.09983 -5.504,-2.09983 -7.60025,0l-5.06683,5.06683c-2.09983,2.09983 -2.09983,5.504 0,7.60025l18.99883,19.006l-19.00242,19.00242c-2.09983,2.09983 -2.09983,5.504 0,7.60025l5.06683,5.06683c2.09983,2.09983 5.504,2.09983 7.60025,0l19.006,-18.99883l19.00242,19.00242c2.09983,2.09983 5.504,2.09983 7.60025,0l5.06683,-5.06683c2.10342,-2.09983 2.10342,-5.504 0.00358,-7.60383z"
+                                        fill="#000000" opacity="0.07"></path>
+                                      <path
+                                        d="M111.33775,55.59542l5.06683,5.06683c1.40108,1.40108 1.40108,3.66933 0,5.06683l-50.6755,50.6755c-1.40108,1.40108 -3.66933,1.40108 -5.06683,0l-5.06683,-5.06683c-1.40108,-1.40108 -1.40108,-3.66933 0,-5.06683l50.6755,-50.6755c1.3975,-1.40108 3.66933,-1.40108 5.06683,0z"
+                                        fill="#ffffff"></path>
+                                      <path
+                                        d="M116.40458,111.33775l-5.06683,5.06683c-1.40108,1.40108 -3.66933,1.40108 -5.06683,0l-50.6755,-50.6755c-1.40108,-1.40108 -1.40108,-3.66933 0,-5.06683l5.06683,-5.06683c1.40108,-1.40108 3.66933,-1.40108 5.06683,0l50.6755,50.6755c1.40108,1.3975 1.40108,3.66933 0,5.06683z"
+                                        fill="#ffffff"></path>
+                                    </g>
+                                    <g fill="#cccccc" stroke="none" stroke-width="1">
+                                      <path d="M99.195,68.94v3.7h-10.97v30.42h-4.48v-30.42h-10.94v-3.7z"></path>
+                                    </g>
+                                    <path d="M62.805,113.06v-54.12h46.39v54.12z" fill="#ff0000" stroke="#50e3c2"
+                                      stroke-width="3" opacity="0"></path>
+                                  </g>
+                                </svg>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <h5>Deseja realmente excluir o produto?</h5>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="submit" class="btn btn-success">Confirmar</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </td>
+              </tr>
+              <% }) %>
+          </tbody>
+        </table>
+      </div>
 
-        <%- include('../partials/footer') %>
+    </section>
+
+    <%- include('../partials/footer') %>
 </body>
 
 </html>
