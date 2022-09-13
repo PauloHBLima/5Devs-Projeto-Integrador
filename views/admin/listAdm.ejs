@@ -50,7 +50,7 @@
                 <th scope="row">
                   <%= product.id %>
                 </th>
-                <td><img class="" src="<%= product.image %>" alt="Imagem" width="70px" height="70px">Mark</td>
+                <td><img class="" src="<%= product.image %>" alt="Imagem" width="70px" height="70px"/></td>
                 <td>
                   <%= product.name%>
                 </td>
@@ -64,10 +64,10 @@
                   <%=product.active%>
                 </td>
                 <td>
-                  <a href="/admin/oneProduct/<%= product.id %>" type="button" class="btn btn-primary">Abrir</a>
-                  <a href="/admin/editProduct/<%= product.id %>" type="button" class="btn btn-secondary">Editar</a>
+                  <a href="/admin/oneProduct/<%= product.id %>" type="button" class="btn buttonglobalstyleform btn-primary" >Abrir</a>
+                  <a href="/admin/editProduct/<%= product.id %>" type="button" class="btn buttonglobalstyleform btn-secondary">Editar</a>
 
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn buttonglobalstyleform btn-danger" data-toggle="modal" data-target="#exampleModal">
                       Excluir
                     </button>
                     <form action="/admin/delete/<%= product.id%>?_method=DELETE" method="POST">

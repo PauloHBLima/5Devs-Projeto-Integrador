@@ -22,7 +22,7 @@ const adminController = {
     },
 
     viewProduct: async (req, res) => {
-        const { id } = req.params
+        const { id } = req.params;
         const products = await Product.findByPk(id);
         return res.render('admin/oneProduct', { products });
     },
@@ -35,7 +35,7 @@ const adminController = {
     },
 
     update: async (req, res) => {
-        const { id } = req.params
+        const { id } = req.params;
         const { name, description, active, image, price, category_id } = req.body;
         await Product.update({
             name,
@@ -52,11 +52,11 @@ const adminController = {
 
     delete: async (req, res) => {
         const { id } = req.params;
-        await Product.destroy({ where: { id } });
+        await Product.destroy({ where: { id  }});
         return res.redirect('/admin/listAdm');  
     }
 
-    }
+}
 
 
 module.exports = adminController;
