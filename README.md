@@ -70,13 +70,13 @@ npm nodemon index.js
 ## Screenshots
 
 Home Page
-![Home Page](./img/readme/homepage.png)
+![Home Page](./public/Img/readme/homepage.png)
 ![Fale Conosco](./img/readme/faleConosco.png)
 
 Login Page
-![Home Page](./img/readme/login.png)
+![Home Page](/img/readme/login.png)
 
-Error Login
-![Individual Page](./img/readme/errorLogin.png)
-![Individual Page](./img/readme/errorUser.png)
-![Individual Page](./img/readme/errorLogin.png)
+Error Pages
+![Individual Page](./public/img/readme/errorLogin.png)
+![Individual Page](./public/img/readme/errorUser.png)
+![Individual Page](./public/img/readme/errorBanco.png)
