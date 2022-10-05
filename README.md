@@ -19,7 +19,7 @@ Back-end: Node Js, express, javascript, SQL.
 
 Front-end: EJS, HTML, CSS, Javascript, Bootstrap.
 
-Wireframe: Figma (se der coloca o link do wireframe do figma aqui tbm)
+Wireframe: Figma
 
 Design pattern: MVC
 
