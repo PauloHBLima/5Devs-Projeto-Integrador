@@ -15,19 +15,19 @@ visual (Front-end), to the logical part (Back-end).
 
 ## Tech Stack
 
-* FrameWork: Express, Figma (Prototipagem das telas)
+Back-end: Node Js, express, javascript, SQL.
 
-* Ambiente de desenvolvimento: Node.js
+Front-end: EJS, HTML, CSS, Javascript, Bootstrap.
 
-* Metodologias de desenvolvimento: SCRUM
+Wireframe: Figma (se der coloca o link do wireframe do figma aqui tbm)
 
-* Front-end: HTML5, CSS3, Bootstrap
+Design pattern: MVC
 
-* Template Engine: EJS
+Banco de dados: Relacional, MySQL.
 
-* Design Patterns: MVC
+ORM: Sequelize
 
-* Back-end: Javascript
+Metodologias Ágeis: SCRUM, Kanban.
 
 ## Environment variables
 ⚙️ Set the environment variables to the Sequelize communicate with the database server
