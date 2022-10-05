@@ -70,13 +70,17 @@ npm nodemon index.js
 ## Screenshots
 
 Home Page
-![Home Page](./public/Img/readme/homepage.png)
-![Fale Conosco](./public/img/readme/faleConosco.png)
+![Home Page](./public/readme/homepage.PNG)
 
-Login Page
-![Home Page](./public/img/readme/login.png)
+contact us
+![Fale Conosco](./public/readme/faleConosco.PNG)
+
 
 Error Pages
-![Individual Page](./public/img/readme/errorLogin.png)
-![Individual Page](./public/img/readme/errorUser.png)
-![Individual Page](./public/img/readme/errorBanco.png)
+
+User already registered
+![Individual Page](./public/readme/errorUser.PNG)
+
+
+Database out of system
+![Individual Page](./public/readme/errorBanco.PNG)
