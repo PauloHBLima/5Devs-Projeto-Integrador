@@ -71,10 +71,10 @@ npm nodemon index.js
 
 Home Page
 ![Home Page](./public/Img/readme/homepage.png)
-![Fale Conosco](./img/readme/faleConosco.png)
+![Fale Conosco](./public/img/readme/faleConosco.png)
 
 Login Page
-![Home Page](/img/readme/login.png)
+![Home Page](./public/img/readme/login.png)
 
 Error Pages
 ![Individual Page](./public/img/readme/errorLogin.png)
