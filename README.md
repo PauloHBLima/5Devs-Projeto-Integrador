@@ -69,18 +69,23 @@ npm nodemon index.js
 
 ## Screenshots
 
-Home Page
+
+### Home Page
 ![Home Page](./public/readme/homepage.PNG)
 
-contact us
+### contact us
 ![Fale Conosco](./public/readme/faleConosco.PNG)
 
 
-Error Pages
+### Admin screen (CRUD of products)
+![Individual Page](./public/readme/admin.PNG)
 
-User already registered
+
+### Error Pages
+
+* User already registered
 ![Individual Page](./public/readme/errorUser.PNG)
 
 
-Database out of system
+* Database out of system
 ![Individual Page](./public/readme/errorBanco.PNG)
